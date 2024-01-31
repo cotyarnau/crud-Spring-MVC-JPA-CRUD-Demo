@@ -5,10 +5,10 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
-import org.hibernate.annotations.ManyToAny;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
-import jakarta.annotation.Generated;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -55,7 +55,7 @@ public class Empleado implements Serializable {
     private Genero genero; 
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    private Departartamento departamento;
+    private Departamento departamento;
     
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "empleado")
      private List<Telefono> telefonos; 

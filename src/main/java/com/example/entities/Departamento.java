@@ -3,7 +3,7 @@ package com.example.entities;
 import java.io.Serializable;
 import java.util.List;
 
-import jakarta.annotation.Generated;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 
-public class Departartamento implements Serializable{
+public class Departamento implements Serializable{
     private static final long serialVersionUID = 1L; 
 
     @Id
