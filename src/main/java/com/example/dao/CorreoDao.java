@@ -12,5 +12,5 @@ import com.example.entities.Telefono;
 @Repository
 public interface CorreoDao extends JpaRepository<Correo, Integer>{
 List<Correo> findByEmpleado(Empleado empleado);
-void deletebyEmpleado(Empleado empleado); 
+void deleteByEmpleado(Empleado empleado); 
 }

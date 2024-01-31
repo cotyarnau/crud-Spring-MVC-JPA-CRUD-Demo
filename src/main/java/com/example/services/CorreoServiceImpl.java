@@ -3,6 +3,7 @@ package com.example.services;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.example.dao.CorreoDao;
 import com.example.dao.EmpleadoDao;
@@ -12,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 @Repository
 @RequiredArgsConstructor
+@Service
 
 
 
@@ -28,7 +30,7 @@ public class CorreoServiceImpl implements CorreoService {
 
     @Override
     public void eliminarCorreos(int idEmpleado) {
-        correoDao.deletebyEmpleado(empleadoDao.findById(idEmpleado).get());
+        correoDao.deleteByEmpleado(empleadoDao.findById(idEmpleado).get());
     }
 
     @Override

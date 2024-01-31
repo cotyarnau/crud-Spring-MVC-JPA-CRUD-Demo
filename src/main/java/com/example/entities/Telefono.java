@@ -29,8 +29,9 @@ public class Telefono implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; 
+    
 
-    private String telefono;
+    private String numero;
      @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     private Empleado empleado;
 }
