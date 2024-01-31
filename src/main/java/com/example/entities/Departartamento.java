@@ -1,5 +1,6 @@
 package com.example.entities;
 
+import java.io.Serializable;
 import java.util.List;
 
 import jakarta.annotation.Generated;
@@ -23,7 +24,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 
-public class Departartamento {
+public class Departartamento implements Serializable{
+    private static final long serialVersionUID = 1L; 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
