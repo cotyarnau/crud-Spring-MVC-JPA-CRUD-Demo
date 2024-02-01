@@ -74,33 +74,39 @@ public class CrudSpringMvcJpaCrudDemoApplication implements CommandLineRunner {
 		.genero(Genero.MUJER)
 		.build();
 
+		empleadoService.persistirEmpleado(emp1);
+		empleadoService.persistirEmpleado(emp2);
+
 		// Telefonos
 
-		List<Telefono> telefonosEmpleado1 = new ArrayList<>();
+		
 		Telefono telefono1Empleado1 = Telefono.builder()
 				.numero("374374657")
+				.empleado(empleadoService.dameunEmpleado(1))
 				.build();
 		Telefono telefono2Empleado1 = Telefono.builder()
 				.numero("293849059")
+				.empleado(empleadoService.dameunEmpleado(1))
 				.build();
 
-		telefonosEmpleado1.add(telefono1Empleado1);
-		telefonosEmpleado1.add(telefono2Empleado1);
-
-		List<Telefono> telefonosEmpleado2 = new ArrayList<>();
+		telefonoService.persistirTelefono(1, telefono1Empleado1);
+		telefonoService.persistirTelefono(1, telefono2Empleado1);
+		
 		Telefono telefono1Empleado2 = Telefono.builder()
 				.numero("374374867")
+				.empleado(empleadoService.dameunEmpleado(2))
 				.build();
 		Telefono telefono2Empleado2 = Telefono.builder()
 				.numero("293849579")
+				.empleado(empleadoService.dameunEmpleado(2))
 				.build();
 
-		telefonosEmpleado2.add(telefono1Empleado1);
-		telefonosEmpleado2.add(telefono2Empleado1);
+				telefonoService.persistirTelefono(2, telefono1Empleado2);
+				telefonoService.persistirTelefono(2, telefono2Empleado2);
 
 		// Correo
 
-		List<Correo> correosEmpleado1 = new ArrayList<>();
+		
 		Correo Correo1Empleado1 = Correo.builder()
 				.correo("cueis@gmail.com")
 				.build();
@@ -108,10 +114,10 @@ public class CrudSpringMvcJpaCrudDemoApplication implements CommandLineRunner {
 				.correo("odli@gmail.com")
 				.build();
 
-				correosEmpleado1.add(Correo1Empleado1);
-				correosEmpleado1.add(Correo2Empleado1);
+		correoService.persistirCorreos(1, Correo1Empleado1);
+		correoService.persistirCorreos(1, Correo2Empleado1);
 		
-		List<Correo> correosEmpleado2 = new ArrayList<>();
+		
 		Correo Correo1Empleado2 = Correo.builder()
 				.correo("ijfi@gmail.com")
 				.build();
@@ -119,8 +125,8 @@ public class CrudSpringMvcJpaCrudDemoApplication implements CommandLineRunner {
 				.correo("idhhf@gmail.com")
 				.build();
 
-				correosEmpleado1.add(Correo1Empleado2);
-				correosEmpleado1.add(Correo2Empleado2);
+				correoService.persistirCorreos(2, Correo1Empleado2);
+				correoService.persistirCorreos(2, Correo2Empleado2);
 
 	}
 }
