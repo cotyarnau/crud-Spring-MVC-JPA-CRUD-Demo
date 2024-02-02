@@ -59,6 +59,7 @@ public class CrudSpringMvcJpaCrudDemoApplication implements CommandLineRunner {
 		Empleado emp1 = Empleado.builder()
 		.nombre("Aurora")
 		.primerApellido("Duque")
+		.segundoApellido("Ramirez")
 		.fechaAlta(LocalDate.of(2012, Month.APRIL, 24))
 		.salario(2500.00)
 		.departamento(departamentoService.dameunDepartamento(1))
