@@ -1,0 +1,27 @@
+/* Estilos generales */
+body {
+    background-color: #f5f5dc; /* Color hueso para el fondo de la pantalla */
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Estilos de la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #d2b48c; /* Marrón claro para los bordes de la tabla */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos para las filas impares (opcional) */
+tr:nth-child(odd) {
+    background-color: #fff8dc; /* Color más claro para las filas impares */
+}

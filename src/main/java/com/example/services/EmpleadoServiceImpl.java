@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 import com.example.dao.EmpleadoDao;
 import com.example.entities.Empleado;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 
 public class EmpleadoServiceImpl implements EmpleadoService {
 

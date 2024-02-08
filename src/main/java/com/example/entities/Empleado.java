@@ -46,9 +46,9 @@ public class Empleado implements Serializable {
     private String segundoApellido;
   
     
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private double salario;
+    
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate fechaAlta;
 
     @Enumerated(EnumType.STRING)

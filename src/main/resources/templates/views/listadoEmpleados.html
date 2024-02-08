@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+
 </head>
 <body>
     <h1>CRUD de Empleados con Spring MVC JPA Thymeleaf</h1>
@@ -31,11 +32,17 @@
                 <td th:text="${empleado.salario}"></td>
                 <td th:text="${empleado.genero}"></td>
                 <td >
-                    <a th:href="@{/detalles?id=}+${empleado.id}">Detalles</a>
+                    <!-- <a th:href="@{/detalles?id=}+${empleado.id}">Detalles</a> -->
+                    <a th:href="@{/detalles/}+${empleado.id}">Detalles</a>
+                    <a th:href="@{/actualizar/}+${empleado.id}">Modificar</a>
+                    <a th:href="@{/eliminar/}+${empleado.id}">Eliminar</a>
                 </td>
                 </tr>
 
             </tbody>
         </table>
+        <button>
+            <a th:href="@{/frmAltaModificacion}">Ingresar/Modificar Empleados</a>
+        </button>
 </body>
 </html>
